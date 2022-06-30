@@ -1,0 +1,202 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+  v2.0 | 20110126
+  License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* RESET STYLESHEET ENDED */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: hsl(217, 54%, 11%);
+  font-family: 'Outfit', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card-container {
+  padding: 15px;
+  margin: 0 auto;
+  background-color: #0C1729;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  color: white;
+}
+
+.card {
+  background-color: hsl(216, 50%, 16%);
+  max-width: 340px;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.image-container {
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+  height: 300px;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 255, 247, 0.5);
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.image-overlay img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.image-container:hover .image-overlay {
+  opacity: 1;
+}
+
+.card .image-container > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card > p {
+  color: hsl(215, 51%, 70%);
+  font-size: 18px;
+}
+
+h2 {
+  margin: 15px 0;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  color: hsl(178, 100%, 50%);
+  font-weight: 600;
+}
+
+.time-left {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: hsl(215, 51%, 70%);
+}
+
+.eth-container .clock-container {
+  display: flex;
+  justify-content: center;
+}
+
+.line {
+  background-color: hsl(215, 32%, 27%);
+  height: 1px;
+  width: 100%;
+}
+
+.author {
+  margin-top: 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.author .avatar {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  padding: 1px;
+  border: 1px solid white;
+}
+
+.author .avatar img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.author p {
+  color: hsl(215, 51%, 70%);
+}
+
+.author-name {
+  color: white;
+  cursor: pointer;
+}
+
+.author .author-name:hover {
+  color: hsl(178, 100%, 50%);
+}
